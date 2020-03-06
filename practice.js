@@ -129,7 +129,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+function divider(numbersArray){
+  let evensArr = []
+  let oddsArr = []
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evensArr.push(numbersArray[i])
+    }else {
+      oddsArr.push(numbersArray[i])
+    }
+  }
+  return newArray = [evensArr, oddsArr]
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -151,7 +162,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(array){
+  let randomNumber = getRandomArbitrary()
+  for(let i = 0; i <= array.length; i++){
+    if(array[i] === randomNumber){
+      return true
+    }
+  }
+  return false
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -180,6 +199,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item){
+  
+}
 
 
 
