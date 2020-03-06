@@ -180,13 +180,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 // Do not edit the code above.
 
 /*
-  Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
+  Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new 
+  items to our list.
 
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove 
+  from myGroceryList. If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from
+  the your grocery list and return the new, updated grocery list.
 
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
-  In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
+  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is
+  an item to add to your grocery list. In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
 
   In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
   If they are not, return an empty array.
@@ -200,7 +202,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 function removeItem(myGroceryList, item){
-  
+  for(i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === item){
+      myGroceryList.splice(myGroceryList[i], 1)
+    }
+    if(myGroceryList > 0){
+      return true
+    }else{
+      return false
+    }
+  }
+  return myGroceryList
+}
+
+function addItem(myGroceryList, item){ 
+  myGroceryList.push(item)
+  return myGroceryList
+
+
 }
 
 
@@ -208,11 +227,19 @@ function removeItem(myGroceryList, item){
 ////////// PROBLEM 9 //////////
 
 /*
-  Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
+  Write a function called maker that creates an array, fills that array with numbers from 1 to 215, 
+  then returns the array.
 */
 
 //Code Here
-
+function maker(){
+  let array = []
+  for(let i = 1; i < 216; i++){
+    array.push(i)
+    
+  }
+  return array
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -228,7 +255,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers){
+  // let newArray = []
+  for(let i = 0; i < numbers.length; i++){
+    numbers.splice(numbers[i], 1, numbers[i] + 10)
+  }
+  return numbers 
+}
 
 
 ////////// PROBLEM 11 //////////
